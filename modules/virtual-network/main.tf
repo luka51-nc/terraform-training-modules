@@ -16,5 +16,9 @@ resource "azurerm_virtual_network" "vnet" {
     security_group = azurerm_network_security_group.nsg.id
   }
 
+  tags = {
+    training = "Terraform"
+  }
+
   depends_on = [var.resource_group_name]
 }
